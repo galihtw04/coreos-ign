@@ -24,7 +24,7 @@
     "users": [
       {
         "name": "gezzka",
-        "passwordHash": "$(openssl passwd -6 040818)",
+        "passwordHash": "$(openssl passwd -6 P@ssw0rd123)",
         "groups": ["sudo", "wheel"],
         "shell": "/bin/bash"
       },
