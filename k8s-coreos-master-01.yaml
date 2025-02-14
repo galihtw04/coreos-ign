@@ -24,13 +24,13 @@
     "users": [
       {
         "name": "gezzka",
-        "passwordHash": "$(openssl passwd -6 P@ssw0rd123)",
+        "passwordHash": "P@ssw0rd123",
         "groups": ["sudo", "wheel"],
         "shell": "/bin/bash"
       },
       {
         "name": "root",
-        "passwordHash": "$(openssl passwd -6 P@ssw0rd123)"
+        "passwordHash": "P@ssw0rd123"
       }
     ]
   },
