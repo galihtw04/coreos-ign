@@ -1,0 +1,45 @@
+{
+    "ignition": {
+      "version": "3.3.0"
+    },
+    "storage": {
+      "files": [
+        {
+          "path": "/etc/hostname",
+          "mode": 420,
+          "contents": {
+            "source": "data:,k8s-coreos-worker-02"
+          }
+        },
+        {
+          "path": "/etc/NetworkManager/system-connections/enp5s0.nmconnection",
+          "mode": 384,
+          "overwrite": false,
+          "contents": {
+            "source": "data:text/plain;charset=utf-8;base64,<hasil encrypt Network_template.conf>"
+          }
+        }
+      ]
+    },
+    "passwd": {
+      "users": [
+        {
+          "name": "gezzka",
+          "passwordHash": "<hasil dari openssl passwd -6 "P@ssw0rd123">",
+          "groups": ["sudo"],
+          "shell": "/bin/bash",
+          "sshAuthorizedKeys": [
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDjMgzYREtQEXgMXiVdeybvu1JDUPq1miqSkVOAH84D9 gezzka@server-lxd"
+          ]
+        }
+      ]
+    },
+    "systemd": {
+      "units": [
+        {
+          "name": "systemd-networkd.service",
+          "enabled": true
+        }
+      ]
+    }
+  }
